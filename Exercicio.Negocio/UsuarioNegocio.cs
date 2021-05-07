@@ -85,9 +85,11 @@ namespace Exercicio.Negocio
         }
         public async Task<dynamic> Login(UsuarioFront entidade)
         {
+            Usuario entidadeLogin = new Usuario(entidade);
+
             var usuario = await _context.Usuario
                 .AsNoTracking()
-                .Where(x=> x.Nome == entidade.Nome && x.Senha == entidade.Senha)
+                .Where(x=> x.Nome == entidadeLogin.Nome && x.Senha == entidadeLogin.Senha)
                 .FirstOrDefaultAsync();
 
             if (usuario == null)
@@ -103,7 +105,7 @@ namespace Exercicio.Negocio
                 usuario.Senha = "********";
             }
 
-            var token = UsuarioTokenService.GenerateToken(usuario);
+            var token = "Bearer " + UsuarioTokenService.GenerateToken(usuario);
             return new 
             {
                 usuario = usuario,

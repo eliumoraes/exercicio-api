@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Exercicio.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("v1/api/[controller]")]
     [ApiController]
     public class StartController : ControllerBase
     {
