@@ -83,9 +83,11 @@ namespace Exercicio.Negocio
                 return (entidadeBanco);
             }
         }
-        public async Task<dynamic> Login(UsuarioFront entidade)
+        public async Task<dynamic> Login(UsuarioLogin entidade)
         {
-            Usuario entidadeLogin = new Usuario(entidade);
+
+            UsuarioFront usuarioFrontLogin = new UsuarioFront(entidade);
+            Usuario entidadeLogin = new Usuario(usuarioFrontLogin);
 
             var usuario = await _context.Usuario
                 .AsNoTracking()

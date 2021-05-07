@@ -10,7 +10,7 @@ namespace Exercicio.Dominio.Interfaces.Negocio
     {
         Task<Usuario> Inserir(UsuarioFront entidade);
         Task<Usuario> Alterar(UsuarioFront entidade);
-        Task<dynamic> Login(UsuarioFront entidade);
+        Task<dynamic> Login(UsuarioLogin entidade);
         Task<List<Usuario>> ConsultarLista();
         Task<bool> Excluir(int codigo);
     }

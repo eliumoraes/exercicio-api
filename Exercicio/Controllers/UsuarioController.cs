@@ -90,7 +90,7 @@ namespace Exercicio.Controllers
         /// <returns></returns>
         [HttpPost("login")]
         public async Task<ActionResult<dynamic>> Autenticar(
-            [FromBody]UsuarioFront entidade)
+            [FromBody]UsuarioLogin entidade)
         {
             if (!ModelState.IsValid)
                 return BadRequest();

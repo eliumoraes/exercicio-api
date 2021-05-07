@@ -4,6 +4,19 @@ namespace Exercicio.Dominio.Entidades
 {
     public class UsuarioFront
     {
+
+        public UsuarioFront()
+        {
+
+        }
+
+        public UsuarioFront(UsuarioLogin usuarioLogin)
+        {
+            this.Nome = usuarioLogin.Nome;
+            this.Senha = usuarioLogin.Senha;
+        }
+
+
         [Key]
         public int Codigo { get; set; }
 
