@@ -26,5 +26,5 @@ Vai dar origem aos usuários:
 Para acessar um método autenticado, realizar login, exemplo: gerente, 123.
 Copiar o token.
 
-Abrir o método Inserir, em categorias, e usar o token copiado na key Authorization do Header.
+Abrir o método Inserir, em categorias, e passar o token copiado na key Authorization do Header.
 Passar os dados da categoria a ser criada.
