@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.14" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Exercicio.Dominio\Exercicio.Dominio.csproj" />
+    <ProjectReference Include="..\Exercicio.Repositorio\Exercicio.Repositorio.csproj" />
+    <ProjectReference Include="..\Exercicio.ServicosExternos\Exercicio.ServicosExternos.csproj" />
+  </ItemGroup>
+
+</Project>
